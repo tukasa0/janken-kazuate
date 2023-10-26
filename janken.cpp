@@ -2,7 +2,15 @@
 #include <iostream>
 using namespace std;
 
-static void Playerhand()
+void InitPoint()
+{
+	player = 0;
+	enemy = 0;
+	playerPoint = 0;
+	enemyPoint = 0;
+}
+
+void Playerhand()
 {
 	bool botton = true;
 
@@ -39,22 +47,22 @@ static void Playerhand()
 	cout << endl;
 }
 
-static void Enemyhand()
+void Enemyhand()
 {
 	enemy = rand() % 3;
 }
 
-static void Showhand(int otherwords, int otherhand)
+void Showhand(int otherwords, int otherhand)
 {
 	cout << words[otherwords] << "‚ÍA" << hand[otherhand] << "‚ðo‚µ‚Ü‚µ‚½B" << endl;
 }
 
-static void Showpoint(int otherwords, int otherpoint)
+void Showpoint(int otherwords, int otherpoint)
 {
 	cout << words[otherwords] << otherpoint << words[Points] << endl;
 }
 
-static bool Compare()
+bool Compare()
 {
 	Enemyhand();
 	Playerhand();
@@ -70,7 +78,7 @@ static bool Compare()
 		cout << words[Player] << "‚ÌŸ‚¿!" << endl;
 		playerPoint++;
 	}
-	else
+	else if(enemy + 1 == player || enemy - 2 == player)
 	{
 		cout << words[Player] << "‚Ì•‰‚¯..." << endl;
 		enemyPoint++;
@@ -102,5 +110,5 @@ void Gamejanken()
 			
 		}
 
-	
+	InitPoint();
 }

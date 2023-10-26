@@ -18,21 +18,23 @@ static const enum Words
 static const char const* hand[] = { "グー", "チョキ", "パー", };
 static const char const* words[] = { "あなた", "あいて", "点", };
 static int player;
-static int playerPoint;
+static int playerPoint = 0;
 static int enemy;
-static int enemyPoint;
+static int enemyPoint = 0;
 
-static void Playerhand();
+void Playerhand();
 
-static void Enemyhand();
+void Enemyhand();
 
-static void Showhand(int otherwords, int otherhand);
+void Showhand(int otherwords, int otherhand);
 
-static void Showpoint(int otherwords, int otherpoint);
+void Showpoint(int otherwords, int otherpoint);
 
-static bool Compare();
+bool Compare();
 
 void InitRand();
+
+void InitPoint();
 
 void Gamejanken();
 #endif //JANKEN_

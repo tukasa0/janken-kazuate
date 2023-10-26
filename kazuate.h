@@ -9,13 +9,13 @@ static int mistake;
 
 void InitRand();
 
-static void Answer();
+ void Answer();
 
 void Gamekazuate();
 
-static void Choice();
+void Choice();
 
-static bool Guess();
+bool Guess();
 
 
 #endif //KAZUATE_

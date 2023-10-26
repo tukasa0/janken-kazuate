@@ -4,22 +4,28 @@
 #include <ctime>
 using namespace std;
 
+void Init()
+{
+	answer = 0;
+	number = 0;
+}
+
 void InitRand()
 {
 	srand((unsigned int)time(NULL));
 }
 
-static void Answer()
+void Answer()
 {
 	cin >> answer;
 }
 
-static void Number()
+void Number()
 {
 	number = rand() % MAX_VALUE + 1;
 }
 
-static bool Guess()
+bool Guess()
 {
 	cout << "‚ ‚È‚½‚Ì“š‚¦‚Í > " << flush;
 	Answer();
@@ -50,5 +56,7 @@ void Gamekazuate()
 	{
 	
 	}
+
+	Init();
 }
 
