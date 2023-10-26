@@ -4,8 +4,6 @@
 #include <ctime>
 using namespace std;
 
-#define D_DEBUG_ON
-
 void InitRand()
 {
 	srand((unsigned int)time(NULL));
@@ -19,11 +17,6 @@ static void Answer()
 static void Number()
 {
 	number = rand() % MAX_VALUE + 1;
-
-#ifdef D_DEBUG_OFF
-	cout << "‘I‚Î‚ê‚½”Žš‚Í" << number << "‚Å‚·B" << endl;
-#endif
-
 }
 
 static bool Guess()

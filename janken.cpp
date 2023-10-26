@@ -2,8 +2,6 @@
 #include <iostream>
 using namespace std;
 
-#define D_DEBUG_ON
-
 static void Playerhand()
 {
 	bool botton = true;
@@ -44,10 +42,6 @@ static void Playerhand()
 static void Enemyhand()
 {
 	enemy = rand() % 3;
-
-#ifdef D_DEBUG_OFF
-	cout << "‘ŠŽè‚Í" << hand[enemy] << "‚ðo‚»‚¤‚Æ‚µ‚Ä‚¢‚é" << endl;
-#endif
 }
 
 static void Showhand(int otherwords, int otherhand)
